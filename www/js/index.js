@@ -84,9 +84,12 @@ var app = {
                 if ( e.regid.length > 0 )
                 {
                     console.log("Regid " + e.regid);
-                    // loadPage("https://www.staging.peerj.com:442/registerSCM?regid="+e.regid);
-                    loadPage("http://qdot.me/?"+e.regid);
+                    //loadPage("https://peerj:!p33rj@14@www.staging.peerj.com:442/registerSCM?regid="+e.regid);
+                    // loadPage("http://192.168.15.73/registerSCM?regid="+e.regid);
+                    // loadPage("http://qdot.me/?"+e.regid);
                     //loadPage("https://www.peerj.com/registerSCM?regid="+e.regid);
+                    //loadPage("https://www.staging.peerj.com:442/");
+                    document.getElementById('container').innerHTML = '<iframe src="http://192.168.15.73/registerGCM?' + e.regid + '" style="width:100%; height:100%">';
                 }
             break;
 

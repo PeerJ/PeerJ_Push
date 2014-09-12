@@ -16,6 +16,7 @@ message.timeToLive = 3000;// Duration in seconds to hold in GCM and retry before
  
 // At least one reg id required
 registrationIds.push('APA91bGozsX67ay6tD87swDU7oRvlQMmvx7pL8xAXTMu9XSBQkibu4W5QaS6-gb1p0mRl3IymvLl_vQOJiunnqgm3S_6uDkDv_e7Ze0_sHI23xpjMFmZ5h7-t87v5UFgSCeiqWUqmyWzUoFWzXFWMcPnyEEifNtsbQ');
+registrationIds.push('APA91bFq9voX26YpvGXBP9tLE3Z4CkyV_sEOLk3jrt0PQTTvp8mQZxkijnNFbYLw-CV7G_Weogb21W6S4O54BEFL5PlOAvbUzRDKoLPzeG02SXwlCog-tCj3PFZnro1YdMCqYLwdRiRE');
  
 /**
  * Parameters: message-literal, registrationIds-array, No. of retries, callback-function
