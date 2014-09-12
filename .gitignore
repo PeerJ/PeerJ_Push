@@ -3,3 +3,5 @@ platforms/android/CordovaLib/ant-build
 platforms/android/ant-gen
 platforms/android/assets/www
 platforms/android/res
+platforms/
+plugins/
