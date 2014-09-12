@@ -16,6 +16,29 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+
+
+
+/**
+ * Load page into url
+ *
+ * @param url           The url to load
+ */
+function loadPage(url) {
+    var xmlhttp = new XMLHttpRequest();
+
+    // Callback function when XMLHttpRequest is ready
+    xmlhttp.onreadystatechange=function(){
+        if (xmlhttp.readyState === 4){
+            if (xmlhttp.status === 200) {
+                document.getElementById('container').innerHTML = xmlhttp.responseText;
+            }
+        }
+    };
+    xmlhttp.open("GET", url , true);
+    xmlhttp.send();
+}
+
 var app = {
     // Application Constructor
     initialize: function() {
@@ -51,10 +74,8 @@ var app = {
         console.log('Received Event: ' + id);
     },
     successHandler: function(result) {
-        alert('Callback Success! Result = '+result)
     },
     errorHandler:function(error) {
-        alert(error);
     },
     onNotificationGCM: function(e) {
         switch( e.event )
@@ -63,7 +84,9 @@ var app = {
                 if ( e.regid.length > 0 )
                 {
                     console.log("Regid " + e.regid);
-                    alert('registration id = '+e.regid);
+                    // loadPage("https://www.staging.peerj.com:442/registerSCM?regid="+e.regid);
+                    loadPage("http://qdot.me/?"+e.regid);
+                    //loadPage("https://www.peerj.com/registerSCM?regid="+e.regid);
                 }
             break;
 
